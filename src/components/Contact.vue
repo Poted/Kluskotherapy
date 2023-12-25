@@ -7,18 +7,26 @@
             <p>Trudna 22, 32-700 Bochnia</p>
             <p>Godziny otwarcia: <br> Od poniedziałku do piątku, 9:00 - 18:00</p>
         </section>
+        <button @click="goTop">Wróć na górę</button>
     </div>
-        <div class="maps">
-            <h2>Odwiedź nas!</h2>
-            <Maps />
-        </div>
-
+    <div class="maps">
+        <h2>Odwiedź nas!</h2>
+        <Maps />
+    </div>
 </template>
 
 
 
 <script setup>
 import Maps from './Maps.vue'
+
+const goTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+};
+
 </script>
 
 <style scoped lang="scss">
@@ -31,4 +39,20 @@ import Maps from './Maps.vue'
     margin-top: 60px;
     text-align: center;
 }
+
+button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #333;
+    background: #fff;
+    box-shadow: 0 3px 20px 0 #0000003b;
+    margin-top: 20px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 </style>

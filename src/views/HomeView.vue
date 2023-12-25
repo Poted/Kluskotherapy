@@ -47,8 +47,9 @@
             nad
             Twoim zdrowiem.</p>
         </div>
-        <ImageWrap />
-        <!-- <img src="../../public/salon.jpg" alt=""> -->
+        <div class="image">
+          <ImageWrap />
+        </div>
       </div>
 
     </section>
@@ -98,36 +99,22 @@ import ImageWrap from '@/components/ImageWrap.vue'
 
     .bottom {
       padding: 8px 40px 8px 40px;
-      // background-color: #f1f1f1;
-      // border-bottom-left-radius: 10px;
-      // border-bottom-right-radius: 10px;
     }
 
     h2 {
       color: white;
     }
 
-    // img {
-    //   width: 100%;
-    //   border-bottom-left-radius: 10px;
-    //   border-bottom-right-radius: 10px;
-    //   margin-bottom: -4px;
-    //   max-height: 100vh;
-    // }
+    .image {
+      align-self: center;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
     display: flex;
     flex-direction: column;
-
-    // img {
-    //   width: 30%;
-    //   border-radius: 5px;
-    //   // margin-bottom: -4px;
-    //   border: 1px solid black;
-    //   align-self: center;
-    //   margin-bottom: 25px;
-    //   // transform: rotate(1deg);
-    // }
-
 
     @media only screen and (max-width: 600px) {
 
@@ -140,6 +127,10 @@ import ImageWrap from '@/components/ImageWrap.vue'
 
       .bottom {
         padding: 5px 20px 5px 20px;
+      }
+
+      .image {
+        width: 80%;
       }
 
     }
