@@ -2,13 +2,16 @@
     <header>
       <div class="overlay">
         <h1>Kluskotherapy</h1>
-        <h2>Zaufaj profesjonalizmowi w trosce o Twoje zdrowie!</h2>
-        <!-- <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum quis, odio veniam itaque ullam debitis
-          qui magnam consequatur ab. Vero nostrum quis, odio veniam itaque ullam debitis qui magnam consequatur ab.
-        </p> -->
-        <br />
+        <h2>Zaufaj profesjonalizmowi w trosce o Twoje zdrowie!</h2>     
         <button @click="readMore">Skontakuj się z nami</button>
+        <div class="icons">
+          <a href="https://www.facebook.com" target="_blank">
+            <img src="../../public/fb.ico" alt="fb">
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+            <img src="../../public/insta.ico" alt="insta">
+          </a>
+        </div>
       </div>
     </header>
   </template>
@@ -39,7 +42,7 @@
   }
   
   header {
-    background: url('https://images.pexels.com/photos/2382325/pexels-photo-2382325.jpeg');
+    background: url('../../public/background.jpeg');
     text-align: center;
     width: 100%;
     height: auto;
@@ -48,9 +51,24 @@
     position: relative;
     overflow: hidden;
     border-radius: 0 0 85% 85% / 30%;
+
+    
+  }
+
+  .icons {
+
+    
+    img {
+      width: 50px;  
+      margin: -30px 30px -20px 30px; 
+    }
   }
   
   header .overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     width: 100%;
     height: 100%;
     padding: 50px;

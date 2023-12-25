@@ -1,6 +1,6 @@
 <template>
     <footer>
-      <p>&copy; 2023 Usługi Fizjoterapeutyczne. Wszelkie prawa zastrzeżone.</p>
+      <p>&copy; 2023 Kluskotherapy. Wszelkie prawa zastrzeżone.</p>
     <div class="footer-icons">
       <a href="https://www.facebook.com/yourclinic" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-facebook-square"></i>

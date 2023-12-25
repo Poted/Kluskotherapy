@@ -24,11 +24,13 @@ import MyFooter from './components/MyFooter.vue'
 
 <style lang="scss">
 
-.container {
-  background-color: white;
-
-  // background-image: linear-gradient(80deg,  10%, #39832757 100%);
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
 }
+
+
 
 
 </style>
