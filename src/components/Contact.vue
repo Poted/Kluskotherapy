@@ -29,7 +29,9 @@ const goTop = () => {
 
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
+// <style scoped lang="scss">
+
 .contact {
     margin-top: 40px;
     text-align: center;
