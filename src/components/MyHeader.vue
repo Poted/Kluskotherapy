@@ -1,17 +1,17 @@
 <template>
   <header>
     <div class="overlay">
-      <h1>Kluskotherapy</h1>
+      <h1>FizjoStacja</h1>
       <h2>Zaufaj profesjonalizmowi w trosce o Twoje zdrowie!</h2>
 
-      <button v-if="currentPage === '/cennik'" style="margin-bottom: 40px;" @click="$router.push('/')">Wróć do strony głównej</button>
-      <button v-if="currentPage === '/'" style="margin-bottom: 10px;" @click="$router.push('/cennik')">Sprawdź naszą ofertę</button>
-      <button v-if="currentPage === '/'" style="margin-bottom: 40px;" @click="readMore">Skontakuj się z nami</button>
+      <!-- <button v-if="currentPage === '/cennik'" style="margin-bottom: 40px;" @click="$router.push('/')">Wróć do strony głównej</button>
+      <button v-if="currentPage === '/'" style="margin-bottom: 10px;" @click="$router.push('/cennik')">Sprawdź naszą ofertę</button> -->
+      <button v-if="currentPage === '/'" @click="readMore">Skontaktuj się ze mną</button>
       <div class="icons">
-        <a href="https://www.facebook.com" target="_blank">
-          <img src="/fb.ico" alt="fb">
+        <a href="https://www.facebook.com/people/FizjoStacja-Julia-Poprawa/61554824174356/" target="_blank">
+          <img src="/fb.ico" alt="fb"> 
         </a>
-        <a href="https://www.instagram.com" target="_blank">
+        <a href="https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Ffizjostacja.bochnia%3Figsh%3DMXJ1MDV3ZmE1ZjUwZg%253D%253D&h=AT3rAMM10MzxSzdONGEsBtlBD_L008B0IE35yvuBBj4YXos7LwGINsshJErIsjDD_b3f3QSFTo_-tq7I74VS2hMVPYzPCtV5qvy-q48AdDHbU6hAAVR0u9RKy7KUBFs9GhDQ6g" target="_blank">
           <img src="/insta.ico" alt="insta">
         </a>
       </div>
@@ -64,12 +64,9 @@ header {
   position: relative;
   overflow: hidden;
   border-radius: 0 0 85% 85% / 30%;
-
-
 }
 
 .icons {
-
 
   img {
     width: 50px;
@@ -80,7 +77,7 @@ header {
 header .overlay {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
 
   width: 100%;
   height: 100%;
@@ -93,8 +90,6 @@ header .overlay {
 h1 {
   font-size: 10vw;
   margin-bottom: 30px;
-
-
 }
 
 h2,
@@ -110,8 +105,10 @@ button {
   border-radius: 50px;
   color: #333;
   background: #fff;
-  // margin: 30px 0 20px 0;
   box-shadow: 0 3px 20px 0 #0000003b;
+  margin-bottom: 40px;
+  width: 40vh;
+  align-self: center;
 }
 
 button:hover {
