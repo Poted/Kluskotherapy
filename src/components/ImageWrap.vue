@@ -1,7 +1,8 @@
 <template>
     <div class="img-wrap">
         <div class="white-border">
-            <img src="https://scontent-waw1-1.xx.fbcdn.net/v/t1.15752-9/403394328_890183829072000_4380863316342879423_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=HifIKnoIv30AX97I3aX&_nc_ht=scontent-waw1-1.xx&oh=03_AdRW8nM_e2UYA77Fhn9tqNK21-SLTmw_UnZgmaAn8xTqJg&oe=65B0DB88"
+            <!-- <img src="https://scontent-waw1-1.xx.fbcdn.net/v/t1.15752-9/403394328_890183829072000_4380863316342879423_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=HifIKnoIv30AX97I3aX&_nc_ht=scontent-waw1-1.xx&oh=03_AdRW8nM_e2UYA77Fhn9tqNK21-SLTmw_UnZgmaAn8xTqJg&oe=65B0DB88" -->
+            <img src="../../public/salon.jpg"
                 alt="salon" />
         </div>
     </div>

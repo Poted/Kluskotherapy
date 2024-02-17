@@ -60,7 +60,7 @@ header {
   width: 100%;
   height: auto;
   background-size: cover;
-  background-attachment: fixed;
+  // background-attachment: fixed;
   position: relative;
   overflow: hidden;
   border-radius: 0 0 85% 85% / 30%;
@@ -90,13 +90,25 @@ header .overlay {
 h1 {
   font-size: 10vw;
   margin-bottom: 30px;
+
+
+  @media only screen and (max-width: 600px) {
+    font-size: 15vw;
+    align-self: center;
+    max-width: 100vw;
+  }
 }
 
 h2,
 p {
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 30px;
+  
+  @media only screen and (max-width: 600px) {
+    font-size: 4vw;
+  }
 }
+
 
 button {
   border: none;
@@ -107,7 +119,7 @@ button {
   background: #fff;
   box-shadow: 0 3px 20px 0 #0000003b;
   margin-bottom: 40px;
-  width: 40vh;
+  width: 35vh;
   align-self: center;
 }
 

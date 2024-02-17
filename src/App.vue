@@ -19,11 +19,14 @@ import MyFooter from './components/MyFooter.vue'
 
 
 <style lang="scss">
-
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
+
+  @media only screen and (max-width: 280px) {
+    width: 104%;
+  }
 }
 
 .container {
@@ -94,38 +97,14 @@ body {
         }
 
       }
+
+    }
+
+    @media only screen and (max-width: 600px) {
+      width: 95%;
     }
 
   }
 
-
-  // #contact {
-  //   width: 80%;
-
-  //   @media only screen and (max-width: 600px) {
-  //     width: 95%;
-  //   }
-  // }
-
-
 }
 </style>
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <header>
-      <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header> -->

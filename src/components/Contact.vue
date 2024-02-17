@@ -31,8 +31,7 @@ const goTop = () => {
 
 </script>
 
-<style lang="scss">
-// <style scoped lang="scss">
+<style scoped lang="scss">
 
 .contact {
     margin-top: 40px;
