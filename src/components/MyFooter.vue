@@ -1,25 +1,25 @@
 <template>
   <footer>
     <p>&copy; 2024 FizjoStacja. Wszelkie prawa zastrzeżone.</p>
-    <div class="pote">
+
+    
+
+    <!-- <div class="pote">
       <button @click="openModal">
         <h1>
-          need website?
+          potrzebujesz strony?
         </h1>
       </button>
       <div id="modal">
         <Modal ref="modalRef" />
       </div>
-    </div>
+    </div> -->
   </footer>
 </template>
   
 <script>
 
 import Modal from "./PoteModal.vue";
-
-const documentHeight = document.documentElement.scrollHeight;
-const viewportHeight = window.innerHeight;
 
 export default {
   components: {
@@ -35,18 +35,15 @@ export default {
 
     },
     goTop() {
-      console.log(":D")
-
       const section = document.getElementById('modal');
       section.scrollIntoView({ behavior: 'smooth' });
-
     },
 
   }
 };
 </script>
   
-<style scoped>
+<style lang="scss" scoped>
 @keyframes color {
   0% {
     border-color: #33CCCC;
@@ -101,28 +98,11 @@ footer {
 
       animation: color 5s infinite linear;
 
-      h1 {
-        text-align: center;
-        font-family: 'Kavoon', sans-serif;
-        font-size: 2.5em;
-        color: white;
-
-        font-size: large;
-      }
     }
 
 
     button:hover {
       cursor: pointer;
-    }
-
-    Modal {
-      height: 1vh;
-      width: 1vw;
-      align-self: center;
-      position: absolute;
-      border-radius: 5px;
-      padding: 0 20px 0 20px;
     }
   }
 }

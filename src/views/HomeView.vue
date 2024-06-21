@@ -1,10 +1,9 @@
-<template>
-  <!-- <div class="container"> -->
+<template class="container">
 
-    <div class="header-text">
-      <h1>Usługi Fizjoterapeutyczne</h1>
-    </div>
-
+  <div class="menu">
+    <button>Cennik: </button>
+    <button v-if="currentPage === '/'" @click="readMore">↓ Kontakt ↓</button>
+  </div>
 
     <section class="content">
       <div class="box">
@@ -12,11 +11,16 @@
           <h2>Terapia indywidualna</h2>
         </div>
         <div class="bottom">
-          <p>Pierwsza wizyta to 45 minut terapii oraz około 15 minut na przeprowadzenie wywiadu i zapoznanie się z dokumentacją medyczną pacjenta.
-            <br>
-            <br> Uprzejmię proszę o zabranie ze sobą wygodnego stroju sportowego niekrępującego ruchów przy ewentualnych ćwiczeniach.
-          </p>
-          <p style="font-weight: bold;">Cena: 130zł</p>
+          <p><strong>• 45 minut:</strong> 130zł</p>
+        </div>
+      </div>
+      
+      <div class="box">
+        <div class="upper">
+          <h2>Konsultacja fizjoterapeutyczna</h2>
+        </div>
+        <div class="bottom">
+          <p><strong>• do 20 minut:</strong> 40zł</p>
         </div>
       </div>
 
@@ -25,8 +29,12 @@
           <h2>Kinesiotaping</h2>
         </div>
         <div class="bottom">
-          <p style="font-weight: bold;">
-            Cena: od 30zł (cena ustalana indywidualnie)
+          <p>
+            <strong>
+            Cena:
+            </strong> od 30zł <strong>
+            (cena ustalana indywidualnie)
+            </strong>
           </p>
         </div>
       </div>
@@ -37,12 +45,14 @@
         </div>
         <div class="bottom">
           <p>
+            <strong>
             • Ultradźwięki <br>
             • Fonoforeza <br>
             • Laseroterapia <br>
-            • Elektroterapia 
+            • Elektroterapia
+            </strong> 
           </p>
-          <p style="font-weight: bold;">
+          <p style="font-weight:400;">
             Cena: 12zł
           </p>
         </div>
@@ -53,10 +63,10 @@
           <h2>Masaż</h2>
         </div>
         <div class="bottom">
-          <p>• 30 minut: <strong>60zł</strong></p>
-          <p>• 40 minut: <strong>80zł</strong></p>
-          <p>• 60 minut: <strong>120zł</strong></p>
-          <p>• 90 minut: <strong>180zł</strong></p>
+          <p><strong>• 30 minut:</strong> 60zł</p>
+          <p><strong>• 40 minut:</strong> 80zł</p>
+          <p><strong>• 60 minut:</strong>120zł</p>
+          <p><strong>• 90 minut:</strong> 180zł</p>
         </div>
       </div>
 
@@ -65,22 +75,8 @@
           <h2>Ćwiczenia indywidualne</h2>
         </div>
         <div class="bottom">
-          <p>• 20 minut: <strong>40zł</strong></p>
-          <p>• 45 minut: <strong>80zł</strong></p>
-        </div>
-      </div>
-
-      <div class="box">
-        <div class="upper">
-          <h2>Komfortowa Przestrzeń</h2>
-        </div>
-        <div class="bottom">
-          <p>Nasza przyjazna atmosfera i nowoczesne sale zabiegowe stwarzają komfortowe warunki do skoncentrowanej pracy
-            nad
-            Twoim zdrowiem.</p>
-        </div>
-        <div class="image">
-          <ImageWrap />
+          <p><strong>• 20 minut:</strong> 40zł</p>
+          <p><strong>• 45 minut:</strong> 80zł</p>
         </div>
       </div>
 
@@ -90,25 +86,105 @@
       <Contact />
     </div>
 
-
-  <!-- </div> -->
 </template>
 
 <script setup>
 import Contact from '@/components/Contact.vue'
-import ImageWrap from '@/components/ImageWrap.vue'
+
+import { useRouter } from 'vue-router';
+import { ref } from 'vue';
+
+const router = useRouter()
+const currentPage = ref('/');
+
+const readMore = () => {
+
+  const section = document.getElementById('contact');
+  section.scrollIntoView({ behavior: 'smooth' });
+
+};
+
+router.afterEach((to) => {
+  currentPage.value = to.path;
+});
+
 
 </script>
 
 
 <style lang="scss">
 
-#contact {
-    width: 80%;
+.container {
 
-    @media only screen and (max-width: 600px) {
-      width: 95%;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+
+  h2 {
+    margin: 2px 0px
+
+    // font-size: 2.5vh;
+  }
+
+  .menu {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+    width: 100%;
+
+
+
+  
+  button {
+    
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    border-radius: 15px;
+    color: #333;
+    background: #fff;
+    box-shadow: 0 3px 20px 0 #0000003b;
+    margin: 40px 0px 0px 0px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+}
+
+
+  
+  @media only screen and (min-width: 1024px) {
+
+    h2 {
+      margin: 5px 0px
+    }
+
+    .menu {
+      button {
+
+        font-size: 2vh;
+      }
     }
   }
+}
+
+#contact {
+
+  width: 80%;
+
+  @media only screen and (max-width: 600px) {
+    width: 95%;
+    
+  }
+}
+
+
 
 </style>

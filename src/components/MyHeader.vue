@@ -2,11 +2,12 @@
   <header>
     <div class="overlay">
       <h1>FizjoStacja</h1>
-      <h2>Zaufaj profesjonalizmowi w trosce o Twoje zdrowie!</h2>
 
       <!-- <button v-if="currentPage === '/cennik'" style="margin-bottom: 40px;" @click="$router.push('/')">Wróć do strony głównej</button>
       <button v-if="currentPage === '/'" style="margin-bottom: 10px;" @click="$router.push('/cennik')">Sprawdź naszą ofertę</button> -->
-      <button v-if="currentPage === '/'" @click="readMore">Skontaktuj się ze mną</button>
+      <!-- <button v-if="currentPage === '/'" @click="readMore">↓ Kontakt ↓</button> -->
+        <h3>Aktualności i promocje na</h3>
+        <br>
       <div class="icons">
         <a href="https://www.facebook.com/people/FizjoStacja-Julia-Poprawa/61554824174356/" target="_blank">
           <img src="/fb.ico" alt="fb"> 
@@ -20,23 +21,6 @@
 </template>
   
 <script setup>
-
-import { useRouter } from 'vue-router';
-import { ref } from 'vue';
-
-const router = useRouter()
-const currentPage = ref('/');
-
-const readMore = () => {
-
-  const section = document.getElementById('contact');
-  section.scrollIntoView({ behavior: 'smooth' });
-
-};
-
-router.afterEach((to) => {
-  currentPage.value = to.path;
-});
 
 </script>
   
@@ -55,12 +39,11 @@ body {
 }
 
 header {
-  background: url('/background.jpeg');
+  background: url('../../public/background.webp');
   text-align: center;
   width: 100%;
   height: auto;
   background-size: cover;
-  // background-attachment: fixed;
   position: relative;
   overflow: hidden;
   border-radius: 0 0 85% 85% / 30%;
@@ -73,6 +56,7 @@ header {
     margin: -30px 30px -20px 30px;
   }
 }
+
 
 header .overlay {
   display: flex;
@@ -88,44 +72,21 @@ header .overlay {
 }
 
 h1 {
-  font-size: 10vw;
+  font-size: 12vw;
   margin-bottom: 30px;
+
+  font-family: "Great Vibes", cursive;
+  font-weight: 600;
+  font-style: normal;
 
 
   @media only screen and (max-width: 600px) {
-    font-size: 15vw;
+    font-size: 18vw;
     align-self: center;
     max-width: 100vw;
   }
 }
 
-h2,
-p {
-  font-family: 'Open Sans', sans-serif;
-  margin-bottom: 30px;
-  
-  @media only screen and (max-width: 600px) {
-    font-size: 4vw;
-  }
-}
-
-
-button {
-  border: none;
-  outline: none;
-  padding: 10px 20px;
-  border-radius: 50px;
-  color: #333;
-  background: #fff;
-  box-shadow: 0 3px 20px 0 #0000003b;
-  margin-bottom: 40px;
-  width: 35vh;
-  align-self: center;
-}
-
-button:hover {
-  cursor: pointer;
-}
 
 </style>
   

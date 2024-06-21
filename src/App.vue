@@ -3,6 +3,8 @@
 
     <MyHeader />
 
+    <!-- <img class="julia" src="../../public/julia.jfif" /> -->
+
     <RouterView />
 
     <MyFooter />
@@ -33,6 +35,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .julia {
+    height: 60vh;
+    position: fixed;
+
+    left: 0;
+    top: 10vh;
+      
+    z-index: -1;
+
+
+  }
 
   .header-text {
     margin-top: 50px;

@@ -3,14 +3,23 @@
 
         <div class="text-container">
             <p>
-                write me a mail:
+                napisz do nas:
             </p>
-            <a href="mailto:o.jpkmc@gmail.com?subject=Subject%20of%20the%20Email&body=Body%20of%20the%20Email">
-                <p id="copy-cat">
-                    o.jpkmc@gmail.com
+            <div class="mail">
+                <p>
+                    <a href="mailto:o.jpkmc@gmail.com?subject=Subject%20of%20the%20Email&body=Body%20of%20the%20Email">
+                        o.jpkmc@gmail.com
+                    </a>
                 </p>
-                <button @click="copyText">ctrl+c</button>
-            </a>
+            </div>
+            <p>
+                lub zadzwoń:
+            </p>
+            <a href="tel:+48788455086">
+                    <p>
+                    +48788455086
+                </p>
+                </a>
         </div>
 
     </div>
@@ -33,7 +42,7 @@ export default {
             textarea.value = textToCopy;
             document.body.appendChild(textarea);
             textarea.select();
-            document.execCommand("copy");
+            // document.execCommand("copy");
             document.body.removeChild(textarea);
         },
 
@@ -43,6 +52,31 @@ export default {
 </script>
   
 <style lang="scss" scoped>
+
+@keyframes text-background {
+
+0% {
+// 100% {
+    background-position: left top;
+}
+
+// 25% {
+//     background-position: left bottom;
+// }
+
+// 50% {
+//     background-position: left top;
+// }
+
+100% {
+// 75% {
+    background-position: left bottom;
+}
+
+}
+
+
+
 .modal-body {
     margin: 0;
     padding: 0;
@@ -62,7 +96,8 @@ export default {
             background-image: url("https://png.pngtree.com/background/20230612/original/pngtree-dark-fractal-wallpaper-by-kristine-schiltz-picture-image_3173399.jpg");
             background-repeat: repeat;
             -webkit-background-clip: text;
-            animation: animate 15s ease-in-out infinite;
+            background-clip: text;
+            animation: text-background 3s linear infinite;
             font-weight: 1000;
 
             -webkit-text-stroke: 0.05rem greenyellow;
@@ -70,45 +105,20 @@ export default {
             @media only screen and (max-width: 600px) {
                 font-size: 9vw;
                 -webkit-text-stroke: 0.02rem greenyellow;
-
             }
+
         }
 
 
         a {
             text-decoration: none;
-        }
-
-        button {
-            transform: rotate(.15rad);
-            margin: 0 0 0 25vh;
-            padding: 8px 8px 8px 8px;
-            border-radius: 10px;
-            font-size: 1.5vh;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        @keyframes animate {
-
-            0%,
-            100% {
-                background-position: left top;
-            }
-
-            25% {
-                background-position: right bottom;
-            }
-
-            50% {
-                background-position: left bottom;
-            }
-
-            75% {
-                background-position: right top;
-            }
+            color: blue;
+            font-weight: 700;
 
         }
+
+
+
     }
 
 }
