@@ -1,6 +1,6 @@
 <template class="container">
 
-
+  
   <div class="menu">
     <button>Cennik: </button>
     <button v-if="currentPage === '/'" @click="readMore">↓ Kontakt ↓</button>
@@ -133,7 +133,7 @@ router.afterEach((to) => {
     flex-direction: row;
     justify-content: space-evenly;
     
-    width: 100%;
+    // width: 80%;
 
 
 
@@ -172,7 +172,6 @@ router.afterEach((to) => {
 
         font-size: 2vh;
       }
-
     }
   }
 }

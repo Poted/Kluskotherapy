@@ -44,7 +44,11 @@ const goTop = () => {
     text-align: center;
     
     .hyperlynx {
+
+        width: 80%;
+        margin: 0px 10%;
         
+
         p {
             
             border: 1px solid black;
