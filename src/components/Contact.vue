@@ -1,18 +1,19 @@
 <template>
     <div class="contact">
         <section>
-            <h2>Skontaktuj się z nami!</h2>
-            <p><a href="mailto:info@example.com">fizjostacja.bochnia@gmail.com</a></p>
-            <p><a href="tel:+48780605484">+48780605484</a></p>
-            <p>Trudna 20/2, 32-700 Bochnia</p>
-            <p>Godziny otwarcia: <br> Od poniedziałku do piątku, 6:00 - 23:00</p>
+            <h2>Kontakt</h2>
+            <div class="hyperlynx"><p><a href="mailto:info@example.com">fizjostacja.bochnia@gmail.com</a></p></div>
+            <div class="hyperlynx"><p><a href="tel:+48780605484">+48780605484</a></p></div>
+            <div class="hyperlynx"><p><a href="https://maps.google.com/maps?ll=49.971895,20.432447&z=17&t=m&hl=pl-PL&gl=US&mapclient=embed&cid=4526446267161382639">Trudna 20/2, 32-700 Bochnia</a></p></div>
+            <br>
+            <p><strong>Godziny otwarcia: <br> Od poniedziałku do piątku,<br>6:00 - 23:00</strong></p>
             <p>Istnieje możliwość umówienia wizyty w weekendy i święta po wcześniejszym kontakcie telefonicznym.</p>
         </section>
-        <button @click="goTop">Wróć na górę</button>
+        <button @click="goTop">↑ Wróć na górę ↑</button>
     </div>
     <div class="maps">
         <h2>Odwiedź nas!</h2>
-        <h3>Za budynkiem znajduję się bezpłatny parking dla pacjentów</h3>
+        <h3>Za budynkiem znajduje się bezpłatne miejsce parkingowe dla pacjentów</h3>
         <Maps />
     </div>
 </template>
@@ -34,14 +35,40 @@ const goTop = () => {
 <style scoped lang="scss">
 
 .contact {
-    margin-top: 40px;
+    margin-top: 10px;
+    font-size: 18px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-
-    a {
-        text-decoration: none;
-        color: cornflowerblue;
-        font-weight: bold;
+    
+    .hyperlynx {
+        
+        p {
+            
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px 1px #b1b1b1b2;
+            background-color: #f1f1f1;
+            padding: 20px;
+            
+            a {
+                text-decoration: none;
+                color: cornflowerblue;
+                font-weight: bold;
+            }
+            
+        }
+        
+        @media only screen and (min-width: 1024px) {
+            font-size: 22px;
+            width: 50%;
+            margin-left: 25%;
+        }
     }
+
+
 }
 
 .maps {
@@ -50,15 +77,20 @@ const goTop = () => {
 }
 
 button {
+
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  
+
     border: none;
     outline: none;
-    padding: 10px 20px;
-    border-radius: 50px;
+    padding: 10px 25px;
+    border-radius: 15px;
     color: #333;
     background: #fff;
     box-shadow: 0 3px 20px 0 #0000003b;
-    margin-top: 20px;
-    width: 20vh;
+    margin-top: 40px;
 }
 
 button:hover {
