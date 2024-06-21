@@ -181,3 +181,4 @@ router.afterEach((to) => {
     }
   }
 }
+</style>
