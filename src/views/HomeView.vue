@@ -1,5 +1,11 @@
 <template class="container">
 
+
+  <div class="menu">
+    <button>Cennik: </button>
+    <button v-if="currentPage === '/'" @click="readMore">↓ Kontakt ↓</button>
+  </div>
+
   <div class="menu">
     <button>Cennik: </button>
     <button v-if="currentPage === '/'" @click="readMore">↓ Kontakt ↓</button>
@@ -171,20 +177,7 @@ router.afterEach((to) => {
 
         font-size: 2vh;
       }
+
     }
   }
 }
-
-#contact {
-
-  width: 80%;
-
-  @media only screen and (max-width: 600px) {
-    width: 95%;
-    
-  }
-}
-
-
-
-</style>
