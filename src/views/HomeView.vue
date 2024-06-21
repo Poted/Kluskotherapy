@@ -6,11 +6,6 @@
     <button v-if="currentPage === '/'" @click="readMore">↓ Kontakt ↓</button>
   </div>
 
-  <div class="menu">
-    <button>Cennik: </button>
-    <button v-if="currentPage === '/'" @click="readMore">↓ Kontakt ↓</button>
-  </div>
-
     <section class="content">
       <div class="box">
         <div class="upper">
