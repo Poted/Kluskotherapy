@@ -1,10 +1,6 @@
 <template>
-  <!-- <div class="container"> -->
 
-    <!-- <div class="header-text">
-      <h1>Oferta</h1>
-    </div> -->
-
+    <button style="margin-bottom: 10px;" @click="$router.push('/')">Wróć do strony głównej</button>
 
     <section class="content">
       <div class="box">
@@ -117,7 +113,6 @@
       </div>
     </section>
 
-  <!-- </div> -->
 
   <button @click="goTop">Wróć na górę</button>
 </template>
@@ -135,4 +130,22 @@ const goTop = () => {
 
 
 <style lang="scss">
+
+   
+button {
+    
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    border-radius: 15px;
+    color: #333;
+    background: #fff;
+    box-shadow: 0 3px 20px 0 #0000003b;
+    margin: 40px 0px 0px 0px;
+  }
+
 </style>

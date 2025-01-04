@@ -7,7 +7,6 @@
             <div class="hyperlynx"><p><a href="https://maps.google.com/maps?ll=49.971895,20.432447&z=17&t=m&hl=pl-PL&gl=US&mapclient=embed&cid=4526446267161382639">Trudna 20/2, 32-700 Bochnia</a></p></div>
             <br>
             <p><strong>Godziny otwarcia: <br> Od poniedziałku do piątku,<br>6:00 - 23:00</strong></p>
-            <p>Istnieje możliwość umówienia wizyty w weekendy i święta po wcześniejszym kontakcie telefonicznym.</p>
         </section>
         <button @click="goTop">↑ Wróć na górę ↑</button>
     </div>
@@ -45,10 +44,6 @@ const goTop = () => {
     
     .hyperlynx {
 
-        width: 80%;
-        margin: 0px 10%;
-        
-
         p {
             
             border: 1px solid black;
@@ -67,8 +62,6 @@ const goTop = () => {
         
         @media only screen and (min-width: 1024px) {
             font-size: 22px;
-            width: 50%;
-            margin-left: 25%;
         }
     }
 

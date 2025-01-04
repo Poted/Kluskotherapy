@@ -1,22 +1,28 @@
 <template>
   <header>
-    <div class="overlay">
-      <h1>FizjoStacja</h1>
 
-      <!-- <button v-if="currentPage === '/cennik'" style="margin-bottom: 40px;" @click="$router.push('/')">Wróć do strony głównej</button>
-      <button v-if="currentPage === '/'" style="margin-bottom: 10px;" @click="$router.push('/cennik')">Sprawdź naszą ofertę</button> -->
-      <!-- <button v-if="currentPage === '/'" @click="readMore">↓ Kontakt ↓</button> -->
-        <h3>Aktualności i promocje na</h3>
-        <br>
+    <div class="overlay">
+
+      <h1>FizjoStacja</h1>
+      <h2>mgr Julia Poprawa</h2>
+
+      <h3>Aktualności i promocje na</h3>
+      <br>
+    
       <div class="icons">
+    
         <a href="https://www.facebook.com/people/FizjoStacja-Julia-Poprawa/61554824174356/" target="_blank">
           <img src="/fb.ico" alt="fb"> 
         </a>
+    
         <a href="https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Ffizjostacja.bochnia%3Figsh%3DMXJ1MDV3ZmE1ZjUwZg%253D%253D&h=AT3rAMM10MzxSzdONGEsBtlBD_L008B0IE35yvuBBj4YXos7LwGINsshJErIsjDD_b3f3QSFTo_-tq7I74VS2hMVPYzPCtV5qvy-q48AdDHbU6hAAVR0u9RKy7KUBFs9GhDQ6g" target="_blank">
           <img src="/insta.ico" alt="insta">
         </a>
+    
       </div>
+    
     </div>
+
   </header>
 </template>
   
@@ -57,11 +63,16 @@ header {
   }
 }
 
+button {
+  width: 100px;
+  background-color: red;
+  height: 100px;
+}
+
 
 header .overlay {
   display: flex;
   flex-direction: column;
-  // align-items: center;
 
   width: 100%;
   height: 100%;
@@ -71,14 +82,16 @@ header .overlay {
   background-image: linear-gradient(80deg, #52e3593f 10%, #38456757 100%);
 }
 
-h1 {
-  font-size: 12vw;
-  margin-bottom: 30px;
 
+h1, h2 {
   font-family: "Great Vibes", cursive;
   font-weight: 600;
   font-style: normal;
+}
 
+
+h1 {
+  font-size: 12vw;
 
   @media only screen and (max-width: 600px) {
     font-size: 18vw;
@@ -87,6 +100,15 @@ h1 {
   }
 }
 
+h2 {
+  font-size: 5vw;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 9vw;
+    align-self: center;
+    max-width: 100vw;
+  }
+}
 
 </style>
   

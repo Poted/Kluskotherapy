@@ -4,6 +4,8 @@
   <div class="menu">
     <button>Cennik: </button>
     <button v-if="currentPage === '/'" @click="readMore">↓ Kontakt ↓</button>
+    <!-- <button v-if="currentPage === '/cennik'" style="margin-bottom: 40px;" @click="$router.push('/')">Wróć do strony głównej</button> -->
+    <!-- <button v-if="currentPage === '/'" style="margin-bottom: 10px;" @click="$router.push('/cennik')">Sprawdź naszą ofertę</button>  -->
   </div>
 
     <section class="content">
@@ -12,7 +14,7 @@
           <h2>Terapia indywidualna</h2>
         </div>
         <div class="bottom">
-          <p><strong>• 45 minut:</strong> 130zł</p>
+          <p><strong>• 45 minut:</strong> 170zł</p>
         </div>
       </div>
       
@@ -21,7 +23,7 @@
           <h2>Konsultacja fizjoterapeutyczna</h2>
         </div>
         <div class="bottom">
-          <p><strong>• do 20 minut:</strong> 40zł</p>
+          <p><strong>• do 20 minut:</strong> 50zł</p>
         </div>
       </div>
 
@@ -33,7 +35,7 @@
           <p>
             <strong>
             Cena:
-            </strong> od 30zł <strong>
+            </strong> od 40zł <strong>
             (cena ustalana indywidualnie)
             </strong>
           </p>
@@ -54,7 +56,7 @@
             </strong> 
           </p>
           <p style="font-weight:400;">
-            Cena: 12zł
+            Cena: 20zł
           </p>
         </div>
       </div>
@@ -64,10 +66,10 @@
           <h2>Masaż</h2>
         </div>
         <div class="bottom">
-          <p><strong>• 30 minut:</strong> 60zł</p>
-          <p><strong>• 40 minut:</strong> 80zł</p>
-          <p><strong>• 60 minut:</strong>120zł</p>
-          <p><strong>• 90 minut:</strong> 180zł</p>
+          <p><strong>• 30 minut:</strong> 90zł</p>
+          <p><strong>• 40 minut:</strong> 120zł</p>
+          <p><strong>• 60 minut:</strong> 160zł</p>
+          <p><strong>• 90 minut:</strong> 220zł</p>
         </div>
       </div>
 
@@ -76,8 +78,8 @@
           <h2>Ćwiczenia indywidualne</h2>
         </div>
         <div class="bottom">
-          <p><strong>• 20 minut:</strong> 40zł</p>
-          <p><strong>• 45 minut:</strong> 80zł</p>
+          <p><strong>• 20 minut:</strong> 60zł</p>
+          <p><strong>• 45 minut:</strong> 100zł</p>
         </div>
       </div>
 
@@ -112,7 +114,6 @@ router.afterEach((to) => {
 
 </script>
 
-
 <style lang="scss">
 
 .container {
@@ -123,21 +124,15 @@ router.afterEach((to) => {
 
   h2 {
     margin: 2px 0px
-
-    // font-size: 2.5vh;
   }
 
   .menu {
 
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    width: 100%;
     
-    // width: 80%;
-
-
-
-  
   button {
     
     font-family: "M PLUS Rounded 1c", sans-serif;
@@ -169,7 +164,6 @@ router.afterEach((to) => {
 
     .menu {
       button {
-
         font-size: 2vh;
       }
     }

@@ -10,7 +10,6 @@ export default {
   components: {},
   methods: {
     goTop() {
-      const section = document.getElementById('modal');
       section.scrollIntoView({ behavior: 'smooth' });
     },
 

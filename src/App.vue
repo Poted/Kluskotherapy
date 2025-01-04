@@ -3,8 +3,6 @@
 
     <MyHeader />
 
-    <!-- <img class="julia" src="../../public/julia.jfif" /> -->
-
     <RouterView />
 
     <MyFooter />
